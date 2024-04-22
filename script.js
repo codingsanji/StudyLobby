@@ -1,7 +1,7 @@
 //VIDEO (BACKGROUND NAVIGATION)
 document.addEventListener("DOMContentLoaded", function() {
     // Array to store video file names
-    var videos = ["videos/nature/rain1.mp4", "videos/nature/rain2.mp4", "videos/nature/sun.mp4"]; 
+    var videos = ["videos/nature/rain1.mp4","videos/nature/sun.mp4"]; 
 
     // Index to keep track of current video
     var currentVideoIndex = 0;
@@ -71,22 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
           { name: "Thunder-storm", timestamp: "1:46:19 " }
         ]
       },
-      {
-        src: "videos/nature/rain2.mp4",
-        songs: [
-          { name: "Song A", timestamp: "0:20" },
-          { name: "Song B", timestamp: "0:45" },
-          { name: "Song C", timestamp: "1:30" }
-        ]
-      },
-      {
-        src: "videos/nature/sun.mp4",
-        songs: [
-          { name: "Song X", timestamp: "0:10" },
-          { name: "Song Y", timestamp: "0:50" },
-          { name: "Song Z", timestamp: "1:40" }
-        ]
-      }
+
     ];
   
     // Index to keep track of current video
