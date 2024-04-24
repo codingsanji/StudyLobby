@@ -1,7 +1,7 @@
 //VIDEO (BACKGROUND NAVIGATION)
 document.addEventListener("DOMContentLoaded", function() {
     // Array to store video file names
-    var videos = ["videos/nature/rain.mp4","videos/nature/forest.mp4" , "videos/game/minecraft.mp4" , "videos/jazz/bedroom-jazz.mp4"]; 
+    var videos = ["videos/nature/rain.mp4","videos/nature/forest.mp4" , "videos/game/minecraft.mp4" , "videos/jazz/bedroom-jazz.mp4" , "videos/classical/classical-room.mp4"]; 
 
     // Index to keep track of current video
     var currentVideoIndex = 0;
@@ -65,7 +65,8 @@ document.addEventListener("DOMContentLoaded", function() {
         { src: "videos/nature/rain.mp4", audioFiles: ["audios/rain/rain-on-leaves.mp3", "audios/rain/rain-w-thunder.mp3", "audios/rain/spring-rain.mp3"] },
         { src: "videos/nature/forest.mp4", audioFiles: ["audios/nature/forest-wildlife.mp3" , "audios/nature/singing-bird.mp3"] },
         { src: "videos/game/minecraft.mp4", audioFiles: ["audios/mc/C418-Aria Math.mp3", "audios/mc/C418-Door.mp3", "audios/mc/C418-Key.mp3" , "audios/mc/C418-Sweden.mp3" , "audios/mc/C418-Wet Hands.mp3" , "audios/mc/C418-Subwoofer Lullaby.mp3" , "audios/mc/C418-Death.mp3" , "audios/mc/C418-Living Mice.mp3" , "audios/mc/C418-Moog City.mp3" , "audios/mc/C418-Haggstrom.mp3" , "audios/mc/C418-Minecraft.mp3", "audios/mc/C418-Oxygène.mp3" , "audios/mc/C418-Équinoxe.mp3", "audios/mc/C418-Mice on Venus.mp3" ] } ,
-        { src: "videos/jazz/bedroom-jazz.mp4", audioFiles: ["audios/jazz/Jacob Koller - City of Stars (from Lalaland).mp3" , "audios/jazz/Justin Hurwitz - Mia & Sebastian's Theme (from Lalaland).mp3" , "audios/jazz/Shin Giwon - Another Day of Sun (from Lalaland).mp3" , "audios/jazz/Most Iverson - All I See In You.mp3" ,"audios/jazz/Midtown Trio - Waltz At Midnight.mp3" , "audios/jazz/James Jackson Jazz Trio - Ludlow.mp3" ] }
+        { src: "videos/jazz/bedroom-jazz.mp4", audioFiles: ["audios/jazz/Jacob Koller - City of Stars (from Lalaland).mp3" , "audios/jazz/Justin Hurwitz - Mia & Sebastian's Theme (from Lalaland).mp3" , "audios/jazz/Shin Giwon - Another Day of Sun (from Lalaland).mp3" , "audios/jazz/Most Iverson - All I See In You.mp3" ,"audios/jazz/Midtown Trio - Waltz At Midnight.mp3" , "audios/jazz/James Jackson Jazz Trio - Ludlow.mp3" ] } ,
+        { src: "videos/classical/classical-room.mp4", audioFiles: ["audios/classical/Luke Faulkner-Clocks.mp3" , "audios/classical/Luke Faulkner-Clouds.mp3" , "audios/classical/Erik Satie - Gymnopédie Number 1.mp3" , "audios/classical/Erik Satie - Gymnopédie Number 2.mp3", "audios/classical/Erik Satie - Gymnopédie Number 3.mp3" ]}
     ];
 
     // Index to keep track of current video
