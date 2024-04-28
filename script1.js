@@ -406,6 +406,27 @@ document.getElementById("task-input").addEventListener("keydown", function(event
     }
 });
 
+// Add event listener to the input field for the Enter and Backspace keys
+document.getElementById("task-input").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        addTask();
+    } else if (event.key === "Backspace") {
+        // Handle Backspace key to delete characters
+        const taskInput = document.getElementById("task-input");
+        const cursorPosition = taskInput.selectionStart;
+        const currentValue = taskInput.value;
+
+        if (cursorPosition > 0) {
+            const newValue = currentValue.substring(0, cursorPosition - 1) + currentValue.substring(cursorPosition);
+            taskInput.value = newValue;
+            taskInput.selectionStart = cursorPosition - 1;
+            taskInput.selectionEnd = cursorPosition - 1;
+        }
+        
+        event.preventDefault(); // Prevent the default Backspace behavior
+    }
+});
+
 
 //CALCULATOR
 // Add event listener to the calculator button
