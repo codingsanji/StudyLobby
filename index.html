@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobby</title>
+
+    <!--LINKS-->
+    <link rel="stylesheet" href="style1.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Madimi+One&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Madimi+One&family=Nova+Square&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tilt+Neon&family=Workbench&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Madimi+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tilt+Neon&family=Workbench&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Croissant+One&family=Madimi+One&family=Nova+Square&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tilt+Neon&family=Workbench&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="navsections">
+
+            <li class="logo">
+                <span class="logo-text">notEcommit</span>
+            </li>
+
+            <li class="section1">
+                <div class="options">
+                    <button id="previousButton"><img src="icons\previous.png" alt="previous" title="previous background" ></button>
+                    <button class="navbuttons1">
+                        <img src="icons\mode.png" alt="modes">
+                    </button>
+                    <button id="nextButton"><img src="icons\next.png" alt="next" title="next background" ></button>
+                </div>
+            </li>
+
+            <li class="sections" id="timerButton">
+                <button class="navbuttons">
+                    <img src="icons\timer.png" alt="timer">
+                </button>
+                <span class="link-text1">Timer</span>
+            </li>
+            <li class="sections">
+                <button class="navbuttons">
+                    <img src="icons\calculator.png" alt="calculator">
+                </button>
+                <span class="link-text1">Calculator</span>
+            </li>
+            <li class="sections">
+                <button class="navbuttons">
+                    <img src="icons\tO-do-list.png" alt="to-do-list">
+                </button>
+                <span class="link-text1">To-do-list</span>
+            </li>
+            <li class="sections">
+                <audio id="audioElement" src=""></audio>
+                <button class="navbuttons" id="musicButton">
+                    <img src="icons/music.png" alt="music">
+                </button>
+                <span class="link-text1">Music</span>
+            </li>  
+            <li class="sections">
+                <button class="navbuttons">
+                    <img src="icons\setting.png" alt="settings">
+                </button>
+                <span class="link-text1">Settings</span>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="video-container" id="videoContainer"></div>
+        <span id="audioNameDisplay" class="audio-name">nothing</span>
+    </main>
+
+    <div class="timer-container" id="timerContainer">
+        <div id="timer-header">
+            <h4 class="tagline">T I M E R</h4>
+            <div id="timer">
+                <h2><span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span></h2>
+            </div>
+        </div>
+        <div id="timer-body">
+            <div id="buttons">
+                <button class="start" id="start"><img src="icons/start.png" alt="start"></button>
+                <button class="stop" id="stop"><img src="icons/stop.png" alt="stop"></button>
+                <button class="pause" id="pause"><img src="icons/pause.png" alt="stop"></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="todo-widget" class="post-it">
+        <h2>To-Do List</h2>
+        <input type="text" id="task-input" placeholder="Add a new task">
+        <button onclick="addTask()">Add Task</button>
+        <ul id="task-list" class="task-list"></ul>
+    </div>
+
+    <div class="CALcontainer">
+        <div class="calculator draggable">
+            <form>
+                <div class="display">
+                    <input type="text" name="display" id="display" class="answer-display">
+                </div>
+                <div class="pad">
+                    <div class="rowone">
+                        <input type="button" value="C" id="btnC" class="one">
+                        <input type="button" value="DE" id="btnDE" class="one">
+                        <input type="button" value="." id="btnDot" class="four">
+                        <input type="button" value="/" id="btnDivide" class="two">
+                    </div>
+                    <div class="rowtwo">
+                        <input type="button" value="7" id="btn7" class="three">
+                        <input type="button" value="8" id="btn8" class="three">
+                        <input type="button" value="9" id="btn9" class="three">
+                        <input type="button" value="*" id="btnMultiply" class="two">
+                    </div>
+                    <div class="rowthree">
+                        <input type="button" value="4" id="btn4" class="three">
+                        <input type="button" value="5" id="btn5" class="three">
+                        <input type="button" value="6" id="btn6" class="three">
+                        <input type="button" value="-" id="btnMinus" class="two">
+                    </div>
+                    <div class="rowfour">
+                        <input type="button" value="1" id="btn1" class="three">
+                        <input type="button" value="2" id="btn2" class="three">
+                        <input type="button" value="3" id="btn3" class="three">
+                        <input type="button" value="+" id="btnPlus" class="two">
+                    </div>
+                    <div class="rowfive">
+                        <input type="button" value="(" id="btnOpenBracket" class="four">
+                        <input type="button" value="0" id="btn0" class="three">
+                        <input type="button" value=")" id="btnCloseBracket" class="four">
+                        <input type="button" value="=" id="btnEquals" class="five">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+
+    <script src="script1.js"></script>
+</body>
