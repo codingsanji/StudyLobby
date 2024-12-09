@@ -12,6 +12,9 @@ For our second-semester coursework, we had to come up with a business idea. Afte
 
 Whether you're studying solo or with friends, Study Lobby is your all-in-one productivity hub to stay focused and motivated! 💪📚
 
-### Here is a preview:
-<video src="https://github.com/codingsanji/StudyLobby/raw/main/videos/snapshot/preview.mp4">
+### Here is a preview: (do note that it'll lead you to the video and you may need to download to view)
+<a href="https://github.com/codingsanji/StudyLobby/raw/main/videos/snapshot/preview.mp4">
+  <img src="/pressTOopen.jpg" alt="Watch the video" width="300">
+</a>
+
 
